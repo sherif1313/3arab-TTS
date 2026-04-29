@@ -20,3 +20,13 @@ git clone https://github.com/sherif1313/3arab-TTS.git
 cd 3arab-TTS
 uv sync
 ```
+
+## Quick Start
+
+```bash
+uv run python infer.py \
+  --hf-checkpoint sherif1313/3arab-TTS-500M-V1 \
+  --text "فسبحان الذي بيده ملكوت كل شيء وإليه ترجعون" \
+  --no-ref \
+  --output-wav outputs/sample.wav
+  ```
