@@ -10,6 +10,7 @@ dependencies = [
     "accelerate",
     "datasets",
     "librosa",
+    "torchcodec",
     "numpy",
     "scipy",
     "soundfile",
