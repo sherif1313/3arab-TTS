@@ -1,4 +1,16 @@
 # 3arab-tts
+Arabic Text-to-Speech (RF-DiT Architecture)
+
+This is a standalone implementation of the Modified Diffuse Transform (RF-DiT) algorithm for Arabic text-to-speech conversion.
+
+It was trained from scratch on a custom Arabic dataset using random weight initialization.
+
+## 📜 Inspiration and Architecture
+The architecture is inspired by modern diffusion-based text-to-speech models, such as Echo-TTS and Irodori-TTS.
+
+This model is a standalone implementation of an RF-DiT-based text-to-speech system, inspired by modern diffusion-based text-to-speech architectures, such as Echo-TTS and Irodori-TTS.
+
+
 Installation
 
 ## Installation
