@@ -1,0 +1,24 @@
+[project]
+name = "arabic-tts"
+version = "1.0"
+requires-python = ">=3.10"
+
+dependencies = [
+    "torch>=2.10",
+    "torchaudio>=2.10",
+    "transformers>=4.57",
+    "accelerate",
+    "datasets",
+    "librosa",
+    "numpy",
+    "scipy",
+    "soundfile",
+    "huggingface-hub",
+    "safetensors",
+    "einops",
+    "tqdm",
+    "gradio",
+    "fastapi",
+    "uvicorn",
+    "dacvae @ git+https://github.com/facebookresearch/dacvae",
+]
