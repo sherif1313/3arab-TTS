@@ -8,7 +8,7 @@ It was trained from scratch on a custom Arabic dataset using random weight initi
 ## 📜 Inspiration and Architecture
 The architecture is inspired by modern diffusion-based text-to-speech models, such as Echo-TTS and Irodori-TTS.
 
-This model is a standalone implementation of an RF-DiT-based text-to-speech system, inspired by modern diffusion-based text-to-speech architectures, such as Echo-TTS and Irodori-TTS.
+This model is a standalone implementation of an RF-DiT-based text-to-speech system, inspired by modern diffusion-based text-to-speech architectures,  Echo-TTS and Irodori-TTS.
 
 
 Installation
