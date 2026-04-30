@@ -25,7 +25,7 @@ uv sync
 
 ```bash
 uv run python infer.py \
-  --hf-checkpoint sherif1313/3arab-TTS-500M-V1 \
+  --hf-checkpoint sherif1313/3arab-TTS-500M-v1 \
   --text "فسبحان الذي بيده ملكوت كل شيء وإليه ترجعون" \
   --no-ref \
   --output-wav outputs/sample.wav
