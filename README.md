@@ -32,5 +32,6 @@ uv run python infer.py \
   ```
 
 
-##Arabic TTS Data Preparation Pipeline
+## Arabic TTS Data Preparation Pipeline
+
 Training Arabic TTS models is challenging due to limited data availability. Audio is often collected from sources like YouTube, focusing on clear speech such as news or audiobooks. The audio is then segmented into short clips (3–7 seconds) using snakers4/silero-vad, and transcribed into text with MohamedRashad/Arabic-Whisper-CodeSwitching-Edition. Finally, transcripts are reviewed and paired with audio to create a clean dataset for training.
