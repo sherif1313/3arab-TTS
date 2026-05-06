@@ -28,7 +28,7 @@ def load_config_and_model(ckpt_path, config_path, device='cuda'):
         latent_dim=model_cfg_dict.get('latent_dim', 32),
         latent_patch_size=model_cfg_dict.get('latent_patch_size', 1),
         text_vocab_size=model_cfg_dict.get('text_vocab_size', 64000),
-        text_tokenizer_repo=model_cfg_dict.get('text_tokenizer_repo', 'sherif1313/arabic-tokenizer-tts'),
+        text_tokenizer_repo=model_cfg_dict.get('text_tokenizer_repo', 'aubmindlab/bert-base-arabertv02'),
         model_dim=model_cfg_dict.get('model_dim', 1280),
         num_layers=model_cfg_dict.get('num_layers', 12),
         num_heads=model_cfg_dict.get('num_heads', 20),
@@ -69,10 +69,10 @@ def load_config_and_model(ckpt_path, config_path, device='cuda'):
     return model, cfg, raw_cfg
 
 def tokenize_text(text, tokenizer_repo, device, add_bos=False):
-    """تحويل النص العربي إلى توكنز باستخدام AraBERT"""
+    """تحويل النص العربي إلى توكنز """
     from transformers import AutoTokenizer
     
-    AutoTokenizer.from_pretrained(tokenizer_repo)
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_repo)
     inputs = tokenizer(
         text,
         return_tensors="pt",
