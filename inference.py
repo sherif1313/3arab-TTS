@@ -5,7 +5,7 @@ inference.py - توليد صوت من نص باستخدام نموذج مدرب
 """
 import sys, torch, torchaudio, json, os, yaml
 from pathlib import Path
-from irodori_tts.codec import DACVAECodec
+from arab_tts.codec import DACVAECodec
 from irodori_tts.config import ModelConfig  # ← استيراد الـ dataclass
 
 # استيراد الكلاس الرئيسي
