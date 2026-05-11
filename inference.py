@@ -5,11 +5,11 @@ inference.py - توليد صوت من نص باستخدام نموذج مدرب
 """
 import sys, torch, torchaudio, json, os, yaml
 from pathlib import Path
-from arab_tts.codec import DACVAECodec
-from irodori_tts.config import ModelConfig  # ← استيراد الـ dataclass
+from arabic_tts.codec import DACVAECodec
+from arabic_tts.config import ModelConfig  # ← استيراد الـ dataclass
 
 # استيراد الكلاس الرئيسي
-from irodori_tts.model import TextToLatentRFDiT
+from arabic_tts.model import TextToLatentRFDiT
 
 def load_config_and_model(ckpt_path, config_path, device='cuda'):
     """تحميل الـ config وبناء النموذج بشكل صحيح"""
@@ -19,7 +19,7 @@ def load_config_and_model(ckpt_path, config_path, device='cuda'):
         raw_cfg = yaml.safe_load(f)
     
     # 2. بناء كائن ModelConfig من القاموس
-    # ملاحظة: هذا يعتمد على تعريف الـ dataclass في irodori_tts/config.py
+    # ملاحظة: هذا يعتمد على تعريف الـ dataclass في arabic_tts/config.py
     model_cfg_dict = raw_cfg.get('model', {})
     
     # إنشاء الـ config باستخدام القيم من الملف
