@@ -20,8 +20,8 @@ import torch.multiprocessing as mp
 from datasets import Audio, load_dataset
 from tqdm import tqdm
 
-from irodori_tts.codec import DACVAECodec
-from irodori_tts.text_normalization import normalize_text
+from arabic_tts.codec import DACVAECodec
+from arabic_tts.text_normalization import normalize_text
 
 
 def _coerce_text(value: Any) -> str:
@@ -769,7 +769,7 @@ def main() -> None:
         action=argparse.BooleanOptionalAction,
         default=True,
         help=(
-            "Apply irodori_tts text normalization before writing manifest text. "
+            "Apply arabic_tts text normalization before writing manifest text. "
             "Use --no-text-normalize to keep raw text."
         ),
     )
