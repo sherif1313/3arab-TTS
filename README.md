@@ -18,7 +18,6 @@ Installation
 ```bash
 git clone https://github.com/sherif1313/3arab-TTS.git
 cd 3arab-TTS
-uv venv --python 3.11 .venv
 uv sync
 ```
 
