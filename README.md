@@ -30,7 +30,7 @@ uv run python infer.py \
   --no-ref \
   --output-wav outputs/sample.wav
   ```
-ط
+
 ```bash
 uv run python infer.py \
   --hf-checkpoint sherif1313/3arab-TTS-500M-v1 \
@@ -38,7 +38,11 @@ uv run python infer.py \
   --ref-wav 5.wav \
   --output-wav outputs/sample.wav
   ```
+## Web UI
 
+```bash
+uv run python app.py
+```
 
 ## Arabic TTS Data Preparation Pipeline
 
