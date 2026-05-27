@@ -9,7 +9,7 @@ model:
   mlp_ratio: 2.875
   text_mlp_ratio: 2.6
   speaker_mlp_ratio: 2.6
-  text_dim: 768
+  text_dim: 512
   text_layers: 10
   text_heads: 8
   speaker_dim: 768
