@@ -1,8 +1,8 @@
 model:
   latent_dim: 32
   latent_patch_size: 1
-  text_vocab_size: 64000
-  text_tokenizer_repo: sherif1313/arabic-tokenizer-tts
+  text_vocab_size: 
+  text_tokenizer_repo: 
   model_dim: 1280
   num_layers: 12
   num_heads: 20
@@ -19,9 +19,6 @@ model:
   timestep_embed_dim: 512
   adaln_rank: 192
 
-  # ✅ إصلاح مشكلة BOS
-  text_add_bos: false
-  caption_add_bos: false
 
 train:
   batch_size: 16
