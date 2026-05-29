@@ -38,6 +38,17 @@ uv run python infer.py \
   --ref-wav 5.wav \
   --output-wav outputs/sample.wav
   ```
+## VoiceDesign Inference
+
+```bash
+uv run python infer.py \
+  --hf-checkpoint Aratako/Irodori-TTS-500M-v2-VoiceDesign \
+  --text "هذا السؤال وحده يمكن ان يغير حياتك بالكامل。" \
+  --caption "نبرة طبيعية" \
+  --no-ref \
+  --output-wav outputs/sample_voice_design.wav
+```
+
 ## Web UI
 
 ```bash
