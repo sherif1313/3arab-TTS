@@ -49,11 +49,19 @@ uv run python infer.py \
   --output-wav outputs/sample_voice_design.wav
 ```
 
-## Web UI
+## Web UI 
 
 ```bash
 uv run python app.py
 ```
+
+## Web UI VoiceDesign
+
+```bash
+uv run python app_voicedesign.py
+```
+
+
 
 ## Arabic TTS Data Preparation Pipeline
 
