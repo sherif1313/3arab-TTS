@@ -64,7 +64,7 @@ uv run python app_voicedesign.py
 ## Web UI 3arab-TTS-Dialogue
 
 ```bash
-uv run python 3arab-TTS-Dialogue.py
+uv run python app_tts_dialogue.py
 ```
 
 
