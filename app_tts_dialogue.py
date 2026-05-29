@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from __future__ import annotations
 
 import argparse
@@ -35,14 +34,10 @@ TONE_CHOICES = [
     "نبرة طبيعية",
     "نبرة اخباريه",
     "نبرة هادئة",
-    "نبرة طبيعية هادئة",
     "صوت انثوي نبرة رسمية",
     "نبرة دينية",
-    "نبرة رسمية",
     "نبرة رسمية هادئة",
-    "نبره اخباريه حاده",
     "صوت انثوي نبره اخباريه",
-    "نبره حاده"
 ]
 
 def _estimate_duration_from_text(text: str) -> float:
@@ -344,9 +339,9 @@ def build_ui() -> gr.Blocks:
 
         with gr.Row():
             with gr.Column():
-                tone1 = gr.Dropdown(label="نبرة المتحدث الأول (أحمد)", choices=TONE_CHOICES, value="نبرة رسمية")
+                tone1 = gr.Dropdown(label="نبرة المتحدث الأول ", choices=TONE_CHOICES, value="نبرة طبيعية")
             with gr.Column():
-                tone2 = gr.Dropdown(label="نبرة المتحدث الثاني (سارة)", choices=TONE_CHOICES, value="صوت انثوي نبرة رسمية")
+                tone2 = gr.Dropdown(label="نبرة المتحدث الثاني ", choices=TONE_CHOICES, value="صوت انثوي نبرة رسمية")
 
         with gr.Accordion("إعدادات التوليد", open=True):
             with gr.Row():
