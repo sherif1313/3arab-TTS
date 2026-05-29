@@ -42,7 +42,7 @@ uv run python infer.py \
 
 ```bash
 uv run python infer.py \
-  --hf-checkpoint Aratako/Irodori-TTS-500M-v2-VoiceDesign \
+  --hf-checkpoint sherif1313/3arab-TTS-500M-v1-VoiceDesign \
   --text "هذا السؤال وحده يمكن ان يغير حياتك بالكامل。" \
   --caption "نبرة طبيعية" \
   --no-ref \
