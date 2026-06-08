@@ -1,7 +1,7 @@
 [project]
-name = "irodori-tts"
+name = "arabic-tts"
 version = "0.1.0"
-description = "Irodori-TTS training and inference codebase"
+description = "arabic-TTS training and inference codebase"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
@@ -65,7 +65,7 @@ ignore = [
 "__init__.py" = ["F401"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["irodori_tts"]
+known-first-party = ["arabic_tts"]
 
 [tool.ruff.format]
 quote-style = "double"
@@ -74,4 +74,4 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.setuptools]
-packages = ["irodori_tts"]
+packages = ["arabic_tts"]
