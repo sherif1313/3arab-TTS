@@ -17,6 +17,7 @@ DURATION_SPEAKER_FUSIONS = {
     "adarn_zero",
     "speaker_cross_attn",
     "text_cross_attn",
+    "none",   # <--- أضف هذا السطر
 }
 DURATION_CAPTION_FUSIONS = {"adarn_zero"}
 DURATION_CAPTION_POOLINGS = {"masked_mean"}
@@ -839,7 +840,7 @@ class DurationPredictor(nn.Module):
             )
         if token_init_frames <= 0:
             raise ValueError(f"duration token_init_frames must be > 0, got {token_init_frames}")
-        if speaker_dim is None and speaker_fusion != "concat":
+        if speaker_dim is None and speaker_fusion != "none":
             raise ValueError(f"duration speaker fusion {speaker_fusion!r} requires speaker_dim.")
         if architecture == "token_sum_adarn_zero_no_aux" and speaker_dim is None:
             raise ValueError("token_sum_adarn_zero_no_aux requires speaker_dim.")
@@ -926,7 +927,7 @@ class DurationPredictor(nn.Module):
         )
 
         if speaker_dim is not None:
-            if speaker_fusion == "concat":
+            if speaker_fusion == "none":
                 input_dim = int(text_dim) + int(speaker_dim) + int(aux_dim)
             elif speaker_fusion == "adarn":
                 input_dim = int(text_dim) + int(aux_dim)
@@ -1192,7 +1193,7 @@ class DurationPredictor(nn.Module):
             has_speaker=has_speaker,
         )
 
-        if self.speaker_fusion == "concat":
+        if self.speaker_fusion == "none":
             x = torch.cat([text_vec, speaker_vec, aux_features], dim=-1)
             cond = None
         elif self.speaker_fusion == "adarn":
