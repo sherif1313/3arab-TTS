@@ -69,29 +69,8 @@ uv run python app_tts_dialogue.py
 
 ## Integrated watermarking
 
-The integrated SilentCipher technology allows for the direct application of strong, invisible audio watermarks to the generated output, without reducing sound quality. These watermarks can be added to the playback code later.
-```python
+The integrated SilentCipher technology allows for the direct application of strong, invisible audio watermarks to the generated output, without reducing sound quality.
 
-        _log(
-            (
-                "[runtime] start synthesize "
-                "model_device={} model_precision={} codec_device={} codec_precision={} "
-                "silentcipher_watermark={} mode={} seconds={} steps={} seed={} candidates={} decode_mode={}"
-            ).format(
-                self.key.model_device,
-                self.key.model_precision,
-                self.key.codec_device,
-                self.key.codec_precision,
-                self.watermarker.ready,
-                req.cfg_guidance_mode,
-                req.seconds,
-                req.num_steps,
-                "random" if req.seed is None else int(req.seed),
-                req.num_candidates,
-                req.decode_mode,
-            )
-        )
-```
 
 ## Arabic TTS Data Preparation Pipeline
 
