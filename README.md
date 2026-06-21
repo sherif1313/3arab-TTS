@@ -16,18 +16,34 @@ pipeline_tag: text-to-speech
 </p>
 
 
-# 3arab-tts
-Arabic Text-to-Speech (RF-DiT Architecture)
+## 🌍 3arab-TTS  
 
-This is a standalone implementation of the Modified Diffuse Transform (RF-DiT) algorithm for Arabic text-to-speech conversion.
+An independent Arabic Text-to-Speech (TTS) model based on the **Rectified Flow Diffusion Transformer (RF-DiT)** architecture.with Voice Design capabilities for controllable speaker identity, pitch, and style.Instead of requiring reference audio for voice cloning, this model features Voice Design 70 different voices
 
-It was trained from scratch on a custom Arabic dataset using random weight initialization.
+The acoustic model was trained entirely from scratch on Arabic speech data using random initialization, with independently developed training and inference pipelines.
 
-## 📜 Inspiration and Architecture
-The architecture is inspired by modern diffusion-based text-to-speech models.
+## Voice Design
 
-This model is a standalone implementation of an RF-DiT-based text-to-speech system, inspired by modern diffusion-based text-to-speech architectures,  Echo-TTS and Irodori-TTS.
+Unlike traditional Arabic TTS systems that require reference audio, the model can generate different speaker styles directly from natural-language voice descriptions without providing a reference recording.
+ ##  ⚠️ What's New 
+ ## Current Version: v2
 
+- ~553M parameters
+- ~700 hours of Arabic speech
+- 48 kHz audio generation
+- DACVAE latent codec
+- RF-DiT acoustic model
+  
+Due to the limited availability of large-scale open Arabic speech datasets, a significant portion of the training data was collected from publicly available Arabic content and carefully filtered for quality.
+
+The current release  include integrated audio watermarking. SilentCipher watermarking  inference releases without affecting audio quality.
+
+## The current release demonstrates that open-source Arabic TTS systems can achieve a level of quality and naturalness comparable to many production-grade solutions. With over 700 hours of carefully curated Arabic speech and a large-scale RF-DiT architecture, 3arab-TTS establishes a strong baseline for next-generation Arabic speech synthesis.
+
+
+## Future versions will focus on:
+
+ improving expressive speech generation
 
 Installation
 
