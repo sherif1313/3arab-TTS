@@ -109,7 +109,7 @@ EMOJI_PALETTE_ITEMS: tuple[EmojiPaletteItem, ...] = (
 
 _INSERT_EMOJI_ON_POINTER_DOWN = (
     "event.preventDefault();"
-    "const root=this.closest('[data-irodori-emoji-palette]');"
+    "const root=this.closest('[data-arabic-emoji-palette]');"
     "const input=root?document.querySelector(root.dataset.target):null;"
     "if(!input)return;"
     "const emoji=this.dataset.emoji;"
@@ -151,7 +151,7 @@ def _emoji_palette_html(textbox: gr.Textbox) -> str:
         )
     return (
         '<div class="emoji-palette-grid" '
-        'data-irodori-emoji-palette="true" '
+        'data-arabic-emoji-palette="true" '
         f'data-target="{target}">'
         f"{''.join(buttons)}</div>"
     )

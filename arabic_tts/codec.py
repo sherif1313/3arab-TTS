@@ -48,7 +48,7 @@ class DACVAECodec:
     @classmethod
     def load(
         cls,
-        repo_id: str = "sherif1313/DACVAE-Arabic-32dim",
+        repo_id: str = "Aratako/Semantic-DACVAE-Japanese-32dim",
         device: str = "cuda",
         dtype: torch.dtype | None = None,
         deterministic_encode: bool = True,
@@ -83,7 +83,7 @@ class DACVAECodec:
         if decoder is not None and hasattr(decoder, "alpha"):
             decoder.alpha = 0.0
             if hasattr(decoder, "wm_model"):
-                # Irodori checkpoints were trained without the DACVAE watermark branch.
+                # arabic checkpoints were trained without the DACVAE watermark branch.
                 # Keep decode output mono while skipping that encode/decode path.
                 def _watermark_passthrough(
                     x: torch.Tensor,
