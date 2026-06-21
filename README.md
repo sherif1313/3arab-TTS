@@ -1,3 +1,21 @@
+license: apache-2.0
+language:
+- ar
+base_model:
+- sherif1313/3arab-TTS-500M-v2
+pipeline_tag: text-to-speech
+---
+ <p align="center">
+    <img src="pic.jpg" width="400"/>
+<p>
+
+<p align="center">
+        💜 <a href="https://github.com/sherif1313/3arab-TTS/"><b>Github</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="https://huggingface.co/sherif1313/">Hugging Face</a>&nbsp&nbsp |  &nbsp&nbsp📚 <a href="https://github.com/sherif1313/Arabic-English-handwritten-OCR-v3/tree/main">Cookbooks</a>&nbsp&nbsp 
+<br>
+🖥️ <a href="https://huggingface.co/spaces/sherif1313/3arab-TTS">Demo</a>&nbsp&nbsp </a>
+</p>
+
+
 # 3arab-tts
 Arabic Text-to-Speech (RF-DiT Architecture)
 
