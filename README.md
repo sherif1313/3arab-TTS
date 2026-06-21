@@ -1,7 +1,3 @@
-license: apache-2.0
-language:
-- ar
-pipeline_tag: text-to-speech
 ---
  <p align="center">
     <img src="pic.jpg" width="400"/>
