@@ -1,8 +1,6 @@
 license: apache-2.0
 language:
 - ar
-base_model:
-- sherif1313/3arab-TTS-500M-v2
 pipeline_tag: text-to-speech
 ---
  <p align="center">
