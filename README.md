@@ -22,28 +22,6 @@ An independent Arabic Text-to-Speech (TTS) model based on the **Rectified Flow D
 
 The acoustic model was trained entirely from scratch on Arabic speech data using random initialization, with independently developed training and inference pipelines.
 
-## Voice Design
-
-Unlike traditional Arabic TTS systems that require reference audio, the model can generate different speaker styles directly from natural-language voice descriptions without providing a reference recording.
- ##  ⚠️ What's New 
- ## Current Version: v2
-
-- ~553M parameters
-- ~700 hours of Arabic speech
-- 48 kHz audio generation
-- DACVAE latent codec
-- RF-DiT acoustic model
-  
-Due to the limited availability of large-scale open Arabic speech datasets, a significant portion of the training data was collected from publicly available Arabic content and carefully filtered for quality.
-
-The current release  include integrated audio watermarking. SilentCipher watermarking  inference releases without affecting audio quality.
-
-## The current release demonstrates that open-source Arabic TTS systems can achieve a level of quality and naturalness comparable to many production-grade solutions. With over 700 hours of carefully curated Arabic speech and a large-scale RF-DiT architecture, 3arab-TTS establishes a strong baseline for next-generation Arabic speech synthesis.
-
-
-## Future versions will focus on:
-
- improving expressive speech generation
 
 Installation
 
@@ -363,10 +341,19 @@ Approximate distribution:
 
 The integrated SilentCipher technology allows for the direct application of strong, invisible audio watermarks to the generated output, without reducing sound quality.
 
+## Voice Design
+
+Unlike traditional Arabic TTS systems that require reference audio, the model can generate different speaker styles directly from natural-language voice descriptions without providing a reference recording.
+ 
+Due to the limited availability of large-scale open Arabic speech datasets, a significant portion of the training data was collected from publicly available Arabic content and carefully filtered for quality.
+
+The current release  include integrated audio watermarking. SilentCipher watermarking  inference releases without affecting audio quality.
 
 ## Arabic TTS Data Preparation Pipeline
 
 Training Arabic TTS models is challenging due to limited data availability. Audio is often collected from sources like YouTube, focusing on clear speech such as news or audiobooks. The audio is then segmented into short clips (3–12 seconds) using snakers4/silero-vad, and transcribed into text with MohamedRashad/Arabic-Whisper-CodeSwitching-Edition. Finally, transcripts are reviewed and paired with audio to create a clean dataset for training.
+
+## The current release demonstrates that open-source Arabic TTS systems can achieve a level of quality and naturalness comparable to many production-grade solutions. With over 700 hours of carefully curated Arabic speech and a large-scale RF-DiT architecture, 3arab-TTS establishes a strong baseline for next-generation Arabic speech synthesis.
 
 
 ## 🙏 Acknowledgments 
