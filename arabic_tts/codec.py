@@ -48,7 +48,7 @@ class DACVAECodec:
     @classmethod
     def load(
         cls,
-        repo_id: str = "Aratako/Semantic-DACVAE-Japanese-32dim",
+        repo_id: str = "sherif1313/DACVAE-Arabic-32dim",
         device: str = "cuda",
         dtype: torch.dtype | None = None,
         deterministic_encode: bool = True,
