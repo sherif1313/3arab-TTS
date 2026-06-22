@@ -239,14 +239,13 @@ def _resolve_checkpoint_path(raw_checkpoint: str) -> str:
     checkpoint = str(raw_checkpoint).strip()
     if checkpoint == "":
         raise ValueError("checkpoint is required.")
-    if is_speaker_inversion_safetensors_path(checkpoint):
-        raise ValueError("Speaker embedding files cannot be used as model checkpoints.")
-
     suffix = Path(checkpoint).suffix.lower()
     if suffix in {".pt", ".safetensors"}:
         return checkpoint
-
-    resolved = hf_hub_download(repo_id=checkpoint, filename="model.pt")
+    try:
+        resolved = hf_hub_download(repo_id=checkpoint, filename="model.safetensors")
+    except Exception:
+        resolved = hf_hub_download(repo_id=checkpoint, filename="model.pt")
     print(f"[gradio-caption] checkpoint: hf://{checkpoint} -> {resolved}", flush=True)
     return str(resolved)
 
