@@ -1,7 +1,7 @@
 [project]
-name = "irodori-tts"
+name = "arabic-tts"
 version = "0.1.0"
-description = "Irodori-TTS training and inference codebase"
+description = "3arabic-TTS "
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
