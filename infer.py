@@ -152,7 +152,7 @@ def main() -> None:
             "(default: enabled)."
         ),
     )
-    parser.add_argument("--codec-repo", default="Aratako/Semantic-DACVAE-Japanese-32dim")
+    parser.add_argument("--codec-repo", default="sherif1313/DACVAE-Arabic-32dim")
     parser.add_argument(
         "--max-text-len",
         type=int,
